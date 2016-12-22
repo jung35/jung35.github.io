@@ -1,0 +1,62 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif; }
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(/fonts/SourceSansPro-Regular.ttf);
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(/fonts/SourceSansPro-Light.ttf);
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(/fonts/SourceSansPro-Semibold.ttf);
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(/fonts/SourceSansPro-Bold.ttf);
+  font-weight: 600;
+  font-style: normal; }
+
+.hero {
+  background: #ff69a6;
+  color: #fff;
+  padding: 20px;
+  min-height: calc(60vh + 20px); }
+  .hero .name {
+    font-size: 10vw; }
+  .hero .title {
+    font-size: 6vw; }
+
+.contact-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: color 180ms linear, border 180ms linear; }
+  .contact-button:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.8); }
+
+.contact-form {
+  height: 20px;
+  width: 1vw; }
