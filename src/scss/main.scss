@@ -1,11 +1,21 @@
+@import 'normalize';
+
 $padding: 20px;
 $hero_bg: #ff69a6;
 
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
 }
 
-@import 'fonts', 'components/hero', 
+* {
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #3F51B5;
+}
+
+@import 'fonts', 'icons', 'components/hero', 
 'components/contact';

@@ -25,7 +25,7 @@ gulp.task('sass', function() {
 
 gulp.task('js', function() {
   return browserify('src/js/main.js')
-    .transform(babelify, {presets: ["es2015", "react"]})
+    .transform(babelify, {presets: ["es2015", "react", "stage-0"]})
     .bundle()
     .pipe(source('main.js'))
     .pipe(gulp.dest("dist"))

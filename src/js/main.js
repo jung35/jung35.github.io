@@ -1,15 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { Hero, Contact } from './components'
+import { Hero, Contact, Navbar } from './components'
 
 const htmlApp = document.getElementById('app')
 
 class Main extends React.Component {
   render() {
     return <div>
-      <Contact />
-      <Hero />
+      <div className="header">
+        <Contact />
+        <Navbar />
+        <Hero />
+      </div>
     </div>
   }
 }

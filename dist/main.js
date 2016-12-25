@@ -20462,6 +20462,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require("react");
@@ -20476,51 +20478,100 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Contact = function (_React$Component) {
-  _inherits(Contact, _React$Component);
+var Contact = function (_Component) {
+  _inherits(Contact, _Component);
 
   function Contact() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, Contact);
 
-    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Contact.__proto__ || Object.getPrototypeOf(Contact)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      display: false,
+      allowSend: false,
+      form: {
+        email: null,
+        subject: null,
+        content: null
+      }
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Contact, [{
-    key: "openForm",
-    value: function openForm() {}
-  }, {
-    key: "onFormSubmit",
-    value: function onFormSubmit(e) {
-      e.preventDefault();
-    }
-  }, {
     key: "render",
     value: function render() {
-      var htmlForm = _react2.default.createElement(
-        "div",
-        { className: "contact-form" },
-        _react2.default.createElement(
-          "form",
-          null,
-          _react2.default.createElement("input", { type: "submit", onClick: this.onFormSubmit })
-        )
-      );
+      var _this2 = this;
+
+      var state = this.state;
+
+      var onFormSubmit = function onFormSubmit(e) {
+        e.preventDefault();
+      };
+
+      var onInputChange = function onInputChange(e) {
+        var form = state.form;
+        var target = e.target;
+
+
+        form[target.name] = target.value;
+
+        _this2.setState(_extends({}, state, { form: form }));
+
+        var allowSend = true;
+
+        for (var name in form) {
+          if (form[name] == null || form[name].length < 1) {
+            allowSend = false;
+            break;
+          }
+        }
+
+        _this2.setState(_extends({}, state, { allowSend: allowSend }));
+      };
 
       return _react2.default.createElement(
         "div",
         { className: "contact" },
-        _react2.default.createElement("htmlForm", null),
         _react2.default.createElement(
           "div",
-          { className: "contact-button", onClick: this.openForm },
-          "O"
+          { className: "contact-form" },
+          _react2.default.createElement(
+            "form",
+            null,
+            _react2.default.createElement(
+              "h2",
+              null,
+              _react2.default.createElement("i", { className: "icon-send" }),
+              "Send a Message"
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "Send me a message using the form below or directly using my email!",
+              _react2.default.createElement(
+                "a",
+                { href: "mailto:jung@jungoh.me", className: "email" },
+                "Jung@Jungoh.me"
+              )
+            ),
+            _react2.default.createElement("input", { name: "email", id: "email_email", type: "email", placeholder: "Email", required: true, onChange: onInputChange }),
+            _react2.default.createElement("input", { name: "subject", id: "email_subject", type: "text", placeholder: "Subject", required: true, onChange: onInputChange }),
+            _react2.default.createElement("textarea", { name: "content", id: "email_content", rows: "10", placeholder: "Your Message.", required: true, onChange: onInputChange }),
+            _react2.default.createElement("input", { type: "submit", value: "Send", onClick: onFormSubmit, disabled: state.allowSend ? false : "disabled" })
+          )
         )
       );
     }
   }]);
 
   return Contact;
-}(_react2.default.Component);
+}(_react.Component);
 
 exports.default = Contact;
 
@@ -20586,7 +20637,53 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Hero = require('./Hero.js');
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Navbar = function (_React$Component) {
+  _inherits(Navbar, _React$Component);
+
+  function Navbar() {
+    _classCallCheck(this, Navbar);
+
+    return _possibleConstructorReturn(this, (Navbar.__proto__ || Object.getPrototypeOf(Navbar)).apply(this, arguments));
+  }
+
+  _createClass(Navbar, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        'navbar'
+      );
+    }
+  }]);
+
+  return Navbar;
+}(_react2.default.Component);
+
+exports.default = Navbar;
+
+},{"react":178}],182:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Hero = require('./Hero');
 
 Object.defineProperty(exports, 'Hero', {
   enumerable: true,
@@ -20595,7 +20692,7 @@ Object.defineProperty(exports, 'Hero', {
   }
 });
 
-var _Contact = require('./Contact.js');
+var _Contact = require('./Contact');
 
 Object.defineProperty(exports, 'Contact', {
   enumerable: true,
@@ -20604,9 +20701,18 @@ Object.defineProperty(exports, 'Contact', {
   }
 });
 
+var _Navbar = require('./Navbar');
+
+Object.defineProperty(exports, 'Navbar', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Navbar).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-},{"./Contact.js":179,"./Hero.js":180}],182:[function(require,module,exports){
+},{"./Contact":179,"./Hero":180,"./Navbar":181}],183:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -20646,8 +20752,13 @@ var Main = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(_components.Contact, null),
-        _react2.default.createElement(_components.Hero, null)
+        _react2.default.createElement(
+          'div',
+          { className: 'header' },
+          _react2.default.createElement(_components.Contact, null),
+          _react2.default.createElement(_components.Navbar, null),
+          _react2.default.createElement(_components.Hero, null)
+        )
       );
     }
   }]);
@@ -20657,4 +20768,4 @@ var Main = function (_React$Component) {
 
 _reactDom2.default.render(_react2.default.createElement(Main, null), htmlApp);
 
-},{"./components":181,"react":178,"react-dom":25}]},{},[182]);
+},{"./components":182,"react":178,"react-dom":25}]},{},[183]);

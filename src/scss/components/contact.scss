@@ -1,31 +1,92 @@
 .contact {
-  &-button {
-    position: absolute;
-    top: $padding;
-    right: $padding;
-
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    cursor: pointer;
-    background: transparent;
-    color: rgba(#fff, 0.6);
-    border: 2px solid rgba(#fff, 0.3);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    transition: color 180ms linear, border 180ms linear;
-
-    &:hover {
-      color: #fff;
-      border-color: rgba(#fff, 0.8);
-    }
-  }
+  position: absolute;
+  background: rgba(#000, 0.7);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &-form {
-    height: $padding;
-    width: 1vw;
+    background: #fff;
+    max-width: calc(100% - (#{$padding} * 2));
+    // padding: $padding;
+
+    h2 {
+      margin: 0;
+      padding: ($padding/2) $padding;
+      font-weight: 500;
+      font-size: 24px;
+      background: #F06292;
+      color: #fff;
+
+      i {
+        vertical-align: 0px;
+        font-size: 18px;
+        line-height: 100%;
+        padding-right: 5px;
+        color: #fff;
+      }
+    }
+
+    p {
+      margin: 0;
+      padding: ($padding/2) $padding;
+      font-size: 14px;
+      line-height: 150%;
+    }
+
+    $input_border: 1px solid #e0e0e0;
+    $button_disabled: #C5CAE9;
+    $button_enabled: #7986CB;
+
+    input, textarea {
+      display: block;
+      width: calc(100% - 20px);
+      padding: 10px 10px 7px;
+      margin: 0;
+      border: 0;
+      border-bottom: 3px solid #eee;
+      background: #fff;
+      font-size: 13px;
+      color: #333;
+      transition: border 180ms linear;
+
+      &:focus {
+        outline: 0;
+        border-bottom-color: $button_enabled;
+      }
+
+      &[type="submit"] {
+        width: 100%;
+        font-weight: 600;
+        color: #fff;
+        background: $button_enabled;
+        padding-bottom: 10px;
+        border: 0;
+
+        &:disabled {
+          background: $button_disabled;
+        }
+      }
+
+      &.error {
+        border-bottom-color: #F8BBD0 !important;
+        $error_placeholder_color: #F8BBD0;
+
+        &::-webkit-input-placeholder {color: $error_placeholder_color;}
+        &::-moz-placeholder {color: $error_placeholder_color;}
+        &:-ms-input-placeholder {color: $error_placeholder_color;}
+        &:-moz-placeholder {color: $error_placeholder_color;}
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
   }
 }
