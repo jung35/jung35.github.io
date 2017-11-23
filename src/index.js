@@ -13,16 +13,11 @@ class App extends Component {
   render()  {
     return <Router>
       <div>
-
-        <ul style={{ listStyleType: 'none', padding: 0 }}>
+        <ul>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/bubblegum">Bubblegum</Link></li>
-          <li><Link to="/shoelaces">Shoelaces</Link></li>
         </ul>
-        
+
         <Route exact path="/" component={ Home }/>
-        <Route exact path="/bubblegum" component={ Home }/>
-        <Route exact path="/shoelaces" component={ Home }/>
       </div>
     </Router>
   }
