@@ -2365,7 +2365,7 @@ var App = function (_Component) {
           null,
           _react2.default.createElement(
             'ul',
-            { style: { listStyleType: 'none', padding: 0 } },
+            null,
             _react2.default.createElement(
               'li',
               null,
@@ -2374,29 +2374,9 @@ var App = function (_Component) {
                 { to: '/' },
                 'Home'
               )
-            ),
-            _react2.default.createElement(
-              'li',
-              null,
-              _react2.default.createElement(
-                _reactRouterDom.Link,
-                { to: '/bubblegum' },
-                'Bubblegum'
-              )
-            ),
-            _react2.default.createElement(
-              'li',
-              null,
-              _react2.default.createElement(
-                _reactRouterDom.Link,
-                { to: '/shoelaces' },
-                'Shoelaces'
-              )
             )
           ),
-          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _script.Home }),
-          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/bubblegum', component: _script.Home }),
-          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/shoelaces', component: _script.Home })
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _script.Home })
         )
       );
     }
@@ -24048,7 +24028,7 @@ var Home = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'Hi'
+        'Hi this website will someday have content...'
       );
     }
   }]);
