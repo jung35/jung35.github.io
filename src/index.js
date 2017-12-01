@@ -12,12 +12,18 @@ import { Home } from './script'
 class App extends Component {
   render()  {
     return <Router>
-      <div>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-        </ul>
-
-        <Route exact path="/" component={ Home }/>
+      <div className='container'>
+        <div className='nav'>
+          <Link to='/' className='logo'>Jung Oh</Link>
+          <ul className='menu'>
+            {/* <li><Link to='/'>Home</Link></li> */}
+          </ul>
+        </div>
+        
+        <div className='content'>
+          <Route exact path='/' component={ Home }/>
+        </div>
+        
       </div>
     </Router>
   }
