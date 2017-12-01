@@ -15,7 +15,7 @@ export default class Home extends Component {
       <div className='home-projects'>
         <h2>Projects</h2>
         <ul className='list'>
-          <li><a href="#">VacStatus <div className="desc">2014-2016</div></a>
+          <li><div className="list-header">VacStatus <div className="desc">2014-2016</div></div>
             <p>Web application to track cheaters for games that use Valve Anti-Cheat (VAC)</p>
             <ul className="tags">
               <li className='php'>laravel</li>
@@ -23,7 +23,7 @@ export default class Home extends Component {
               <li className='react'>react</li>
             </ul>
           </li>
-          <li><a href="#">10 Man bot <div className="desc">2017</div></a>
+          <li><div className="list-header">10 Man bot <div className="desc">2017</div></div>
             <p>Discord bot to help setup teams and map votes for private counter-strike match</p>
             <ul className="tags">
               <li className="node">node</li>
@@ -37,7 +37,7 @@ export default class Home extends Component {
       <div className="home-hackathon">
         <h2>Hackaton <small>(wikipedia on <a href="https://en.wikipedia.org/wiki/Hackathon" target="_blank">hackathon</a>)</small></h2>
         <ul className='list'>
-          <li><a href="#">Subtle Scheme <div className="desc">Hack Illinois 2015</div></a>
+          <li><div className="list-header">Subtle Scheme <div className="desc">Hack Illinois 2015</div></div>
             <p>Browser based game where players use phones as controllers to answer fill-in-the-blank trivia questions</p>
             <ul className="tags">
               <li className="react">react</li>
@@ -47,14 +47,14 @@ export default class Home extends Component {
               <li className="mongodb">mongodb</li>
             </ul>
           </li>
-          <li><a href="#">MechMania <div className="desc">MechMania 2017</div></a>
+          <li><div className="list-header">MechMania <div className="desc">MechMania 2017</div></div>
             <p>AI to compete in a 3v3 combat arena</p>
             <ul className="tags">
               <li className="csharp">C#</li>
               <li className="csharp">Unreal</li>
             </ul>
           </li>
-          <li><a href="#">Electronic Trading Challenge <div className="desc">Jane Street ETC 2017</div></a>
+          <li><div className="list-header">Electronic Trading Challenge <div className="desc">Jane Street ETC 2017</div></div>
             <p>AI to compete in a simulated market trading challenge</p>
             <ul className="tags">
               <li className="python">Python</li>
