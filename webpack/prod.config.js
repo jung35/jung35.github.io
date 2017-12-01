@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseConfig = require('./base.config.js')
 
@@ -15,6 +16,10 @@ module.exports = merge(baseConfig, {
       template: 'src/template.ejs',
       inject: 'body'
     }),
+    new webpack.optimize.CommonsChunkPlugin('common.js'),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin()
   ],
 
   module: {
