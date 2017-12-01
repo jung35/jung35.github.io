@@ -22,9 +22,10 @@
       display: flex;
       justify-content: space-between;
       color: #000;
-      background: #eee;
+      background: #FAFAFA;
       padding: 3px 7px;
       margin: 0 0 7px;
+      transition: background 100ms ease-in;
 
       .title {
         font-weight: bold;
@@ -39,11 +40,12 @@
     & > li {
       margin: 0;
       cursor: pointer;
-      transition: background 100ms ease-in;
       background: #fff;
 
       &:hover {
-        background: rgba(0, 0, 0, 0.01);
+        .list-header {
+          background: #F5F5F5;
+        }
       }
 
       p {
