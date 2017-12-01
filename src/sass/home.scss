@@ -36,10 +36,15 @@
       }
     }
 
-    li {
-      margin: 0 0 10px;
+    & > li {
+      margin: 0;
       cursor: pointer;
+      transition: background 100ms ease-in;
+      background: #fff;
 
+      &:hover {
+        background: rgba(0, 0, 0, 0.01);
+      }
 
       p {
         margin: 0;
