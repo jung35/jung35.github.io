@@ -45,7 +45,7 @@ export default class Home extends Component {
         <p>...</p>
       </div>
       <div className="home-hackathon">
-        <h2>Hackaton <small>(wikipedia on <a href="https://en.wikipedia.org/wiki/Hackathon" target="_blank">hackathon</a>)</small></h2>
+        <h2>Hackathon <small>&mdash; Coding competition held for 12 to 48 hours to create a software. (<a href="https://en.wikipedia.org/wiki/Hackathon" target="_blank">wikipedia</a>)</small></h2>
         <ul className='list'>
           {
             hackathonData.map(hackathon => {
