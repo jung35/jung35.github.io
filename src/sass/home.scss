@@ -45,15 +45,15 @@
   }
 
   ul.tags {
-    display: inline-block;
+    display: block;
     margin: 0;
     padding: 7px;
     list-style: none;
 
     li {
-      display: inline;
+      display: inline-block;
       padding: 2px 5px;
-      margin: 0 5px 0 0;
+      margin: 0 5px 5px 0;
       font-size: 0.9em;
       font-weight: bold;
     }
