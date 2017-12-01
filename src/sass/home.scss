@@ -11,31 +11,35 @@
     }
   }
 
-  ul.list {
+  .list {
     margin: 0;
     padding: 0;
     list-style: none;
     font-size: 14px;
     line-height: 150%;
 
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      color: #000;
+      background: #eee;
+      padding: 3px 7px;
+      margin: 0 0 7px;
+
+      .title {
+        font-weight: bold;
+      }
+
+      .desc {
+        font-size: 0.9em;
+        text-align: right;
+      }
+    }
+
     li {
       margin: 0 0 10px;
       cursor: pointer;
 
-      .list-header {
-        display: block;
-        color: #000;
-        background: #eee;
-        padding: 3px 7px;
-        margin: 0 0 7px;
-        font-weight: bold;
-
-        .desc {
-          float: right;
-          font-size: 0.9em;
-          font-weight: normal;
-        }
-      }
 
       p {
         margin: 0;
