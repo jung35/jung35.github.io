@@ -7,6 +7,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = merge(baseConfig, {
+  output: {
+    publicPath: './dist'
+  },
   plugins: [
     new CleanWebpackPlugin(['dist', 'index.html'],{
       root: path.resolve(__dirname, '../'),
