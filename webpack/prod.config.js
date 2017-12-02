@@ -8,7 +8,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = merge(baseConfig, {
   output: {
-    publicPath: './dist'
+    publicPath: './dist/'
   },
   plugins: [
     new CleanWebpackPlugin(['dist', 'index.html'],{
