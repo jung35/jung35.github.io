@@ -9,6 +9,9 @@ import ReactDOM from 'react-dom'
 import './sass/main.scss'
 import { Home } from './script'
 
+import githubIcon from './img/github.png'
+import mailIcon from './img/mail.png'
+
 class App extends Component {
   render()  {
     return <Router>
@@ -17,6 +20,16 @@ class App extends Component {
           <Link to='/' className='logo'>Jung Oh</Link>
           <ul className='menu'>
             {/* <li><Link to='/'>Home</Link></li> */}
+            <li>
+              <a href="https://github.com/jung35" target="_blank">
+                <img src={ githubIcon } alt="github profile"/>jung35
+              </a>
+            </li>
+            <li>
+              <a href="mailto:jung@jungoh.me">
+                <img src={ mailIcon } alt="email"/>jung@jungoh.me
+              </a>
+            </li>
           </ul>
         </div>
         
