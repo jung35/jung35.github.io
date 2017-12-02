@@ -4,8 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: './bundle.js',
     path: path.resolve(__dirname, '../dist'),
+    filename: './bundle.js',
     filename: "[name]-[hash].js"
   },
   plugins: [
@@ -23,9 +23,12 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
+        use: [{
+          loader: 'file-loader',
+          options: {
+            outputPath: './dist/',
+          }
+        }]
       }
     ]
   }
