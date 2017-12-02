@@ -8,9 +8,7 @@ export default class Home extends Component {
     return <div className='home'>
       <div className="home-introduction">
         <p>
-          Hi there, I'm a front-end developer that loves <span className="react">react</span>
-          and also proficient in back-end with <span className='ruby'>ruby</span>
-          , <span className='node'>node</span>, and <span className='php'>php</span>.
+          Hi there, I'm a front-end developer that loves <span className="react">react</span> and also proficient in back-end with <span className='ruby'>ruby</span>, <span className='node'>node</span>, and <span className='php'>php</span>.
         </p>
       </div>
       <div className='home-projects'>
