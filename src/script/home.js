@@ -41,7 +41,7 @@ export default class Home extends Component {
       </div>
       <div className="home-work">
         <h2>Works</h2>
-        <p>...</p>
+        <p>...WIP</p>
       </div>
       <div className="home-hackathon">
         <h2>Hackathon <small>&mdash; Coding competition held for 12 to 48 hours to create a software. (<a href="https://en.wikipedia.org/wiki/Hackathon" target="_blank">wikipedia</a>)</small></h2>
