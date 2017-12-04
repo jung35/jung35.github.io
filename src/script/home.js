@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import projectData from './data/projects'
 import hackathonData from './data/hackathon'
+import workData from './data/work'
 
 export default class Home extends Component {
   render() {
