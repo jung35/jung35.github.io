@@ -55,6 +55,33 @@
     }
   }
 
+  .companies {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #212121;
+    border: 1px solid #fff;
+    outline: 1px solid #212121;
+
+    li {
+      padding: 15px;
+    }
+
+    img {
+      max-height: 32px;
+      filter: grayscale(100%);
+      cursor: pointer;
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+
   ul.tags {
     display: block;
     margin: 0;
@@ -68,8 +95,6 @@
       font-size: 0.9em;
       font-weight: bold;
     }
-
-
   }
 
   &-introduction {
