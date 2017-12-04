@@ -1,8 +1,6 @@
-const imgPath = '../../img/work/'
-
 export default [
   {
     title: 'ScreeningOne',
-    logo: require(`${imgPath}screeningone/logo.png`),
+    logo: require('../../img/work/screeningone/logo.png'),
   }
 ]
