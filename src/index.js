@@ -16,6 +16,7 @@ class App extends Component {
   render()  {
     return <Router>
       <div className='container'>
+        <div className="notice">Hi! Welcome to my webpage. If you're wondering why things that look clickable isn't clicking, it's because this website is still under development!</div>
         <div className='nav'>
           <Link to='/' className='logo'>Jung Oh</Link>
           <ul className='menu'>

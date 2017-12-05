@@ -39,7 +39,7 @@ export default class Home extends Component {
         </ul>
       </div>
       <div className="home-work">
-        <h2>Clients</h2>
+        <h2>Previous Works</h2>
         <ul className="companies">
           {workData.map(work => {
             return <li key={ work.title }>
